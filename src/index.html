@@ -1,24 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- HTML Meta Tags -->
-    <title>Landing</title>
-
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.0.9/css/all.css"
       integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1"
       crossorigin="anonymous"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Open+Sans:wght@300&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Open+Sans" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.6.0/tiny-slider.css"
@@ -27,6 +17,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.6.0/min/tiny-slider.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment-with-locales.min.js" integrity="sha512-vFABRuf5oGUaztndx4KoAEUVQnOvAIFs59y4tO0DILGWhQiFnFHiR+ZJfxLDyJlXgeut9Z07Svuvm+1Jv89w5g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </head>
   <body>
     <nav class="nav--desktop">
@@ -85,7 +76,7 @@
           </a>
         </div>
         <div class="flex_child--horizontal fadeInUp">
-          <img src="./images/hero-phone.png" alt="" />
+          <img src="./images/hero-phone.png"  />
         </div>
       </div>
     </section>
@@ -94,15 +85,15 @@
       <div class="flex--vertical">
         <div class="flex_child--vertical flex--horizontal summary__lists">
           <div class="summary__list flex--horizontal fadeIn">
-            <img src="./images/summary-github.png" alt="" />
+            <img src="./images/summary-github.png"  />
             <p>works on phone and all devices</p>
           </div>
           <div class="summary__list flex--horizontal fadeIn">
-            <img src="./images/summary-cpu.png" alt="" />
+            <img src="./images/summary-cpu.png"  />
             <p>free status page for monitoring</p>
           </div>
           <div class="summary__list flex--horizontal fadeIn">
-            <img src="./images/summary-dollar.png" alt="" />
+            <img src="./images/summary-dollar.png"  />
             <p>easy integrations and setup</p>
           </div>
         </div>
@@ -212,7 +203,7 @@
             </p>
           </div>
         </div>
-        <img class="features__image" src="./images/features-image.png" alt="" />
+        <img class="features__image" src="./images/features-image.png" />
         <div class="features__right aligner flex--vertical">
           <div
             class="flex--vertical fadeInRight fadeInRight--{{ forloop.index0 }}"
@@ -343,6 +334,7 @@
                 <h4 class="font-fjalla slide-0">
                   Oasis provides a robust synopsis of our service statuses
                 </h4>
+                <p class="time-ago" data-date="2022-01-02"></p>
                 <p class="slide-0">
                   Iterative approaches to corporate strategy foster
                   collaborative thinking to further the overall value
@@ -360,6 +352,7 @@
                 <h4 class="font-fjalla slide-1">
                   Oasis has brought clarity to our architecture
                 </h4>
+                <p class="time-ago" data-date="2022-02-02"></p>
                 <p class="slide-1">
                   Iterative approaches to corporate strategy foster
                   collaborative thinking to further the overall value
@@ -386,5 +379,14 @@
       </div>
 
     <script type="text/javascript" src="./js/main.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-86QH9G25FH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-86QH9G25FH');
+    </script>
   </body>
 </html>

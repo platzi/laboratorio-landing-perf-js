@@ -4,10 +4,7 @@ module.exports = {
       startServerCommand: "npm run start",
       url: ["http://localhost:8080"],
       numberOfRuns: 1,
-      chromePath: "/usr/bin/google-chrome",
-      settings: {
-        chromeFlags: "--disable-gpu --no-sandbox --headless",
-      },
+      // chromePath: "/bin/google-chrome"
     },
     assert: {
       assertions: {

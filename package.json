@@ -1,5 +1,5 @@
 {
-  "name": "laboratorio-landing-perf-vanillajs",
+  "name": "laboratorio-web-perf-vanillajs",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -14,6 +14,6 @@
     "http-server": "14.1.1"
   },
   "devDependencies": {
-    "@lhci/cli": "0.7.2"
+    "@lhci/cli": "0.9.0"
   }
 }

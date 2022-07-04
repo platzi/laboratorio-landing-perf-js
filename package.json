@@ -1,0 +1,19 @@
+{
+  "name": "laboratorio-landing-perf-vanillajs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server ./src -p 8080",
+    "lhci": "lhci autorun"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "14.1.1"
+  },
+  "devDependencies": {
+    "@lhci/cli": "0.7.2"
+  }
+}

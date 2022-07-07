@@ -1,5 +1,9 @@
 name: Lighthouse CI
-on: [push]
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
 jobs:
   lhci:
     name: Lighthouse CI
@@ -11,9 +15,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
-      - name: Install 
+      - name: Install
         run: npm ci
-      - name: Run 
+      - name: Run
         run: npm run lhci
 
-    

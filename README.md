@@ -7,7 +7,7 @@ Este en proyecto está la landing de un producto, el cual tiene toda la informac
 - [El Reto](#el-reto)
 - [Como enviar tu solución](#como-enviar-tu-solución)
 - [Licencia](#licencia)
-- [Credits](#Credits)
+- [Credits](#credits)
 
 ## Instalación
 

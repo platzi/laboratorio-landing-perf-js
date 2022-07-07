@@ -34,7 +34,7 @@ El proyecto ya viene con una configuración por defecto, de la siguiente manera:
     └── js
 ```
 
-El sitio en este momento tiene todo su css en el archivo `src/css/main.css` y interacciones con JavaScript en el archivo `src/js/main.js` y todas las imágenes  en `src/images/*`.
+El sitio en este momento tiene todo su css en el archivo `src/css/main.css`, interacciones con JavaScript en el archivo `src/js/main.js` y todas las imágenes  en `src/images/*`.
 
 
 ### Scripts
@@ -44,7 +44,7 @@ El sitio en este momento tiene todo su css en el archivo `src/css/main.css` y in
 
 ## El reto
 
-En este momento tenemos que la landing page tiene un bajo puntaje según el reporte de Lighthouse lo cual hace que los usuarios se vayan del sitio, es decir hay un porcentaje de rebote muy alto, ya que el sitio se demora en cargar y no tiene buenas prácticas en SEO para que aparezca en motores de búsqueda, lo cual está afectando el negocio y el dinero invertido en campañas para atraer usuarios.
+En este momento tenemos que el sitio tiene un bajo puntaje según el reporte de Lighthouse lo cual hace que los usuarios se vayan del sitio, es decir hay un porcentaje de rebote muy alto, ya que el sitio se demora en cargar y no tiene buenas prácticas en SEO para que aparezca en motores de búsqueda, lo cual está afectando el negocio y el dinero invertido en campañas para atraer usuarios.
 
 El objetivo es implementar los cambios necesario para que el puntaje de Lighthouse en todas las categorias sea mayor a 90%, por ende en el repositorio se ha incluido el comando `npm run lhci` que dada la configuración en el archivo `lighthouserc.js` comprueba los puntajes.
 
@@ -52,7 +52,7 @@ Cuando corras el comando `npm run lhci` por primera vez se verá así:
 
 ![failed](https://i.imgur.com/VE4xYG3.png)
 
-Además puedes ver un link al final para ver el reporte en modo HTML, así:
+Además puedes ver un link al final para ver el reporte en modo HTML:
 
 ![report](https://i.imgur.com/hHfGWE6.png)
 

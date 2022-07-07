@@ -46,7 +46,14 @@ El sitio en este momento tiene todo su css en el archivo `src/css/main.css`, int
 
 En este momento tenemos que el sitio tiene un bajo puntaje según el reporte de Lighthouse lo cual hace que los usuarios se vayan del sitio, es decir hay un porcentaje de rebote muy alto, ya que el sitio se demora en cargar y no tiene buenas prácticas en SEO para que aparezca en motores de búsqueda, lo cual está afectando el negocio y el dinero invertido en campañas para atraer usuarios.
 
-El objetivo es implementar los cambios necesario para que el puntaje de Lighthouse en todas las categorias sea mayor a 90%, por ende en el repositorio se ha incluido el comando `npm run lhci` que dada la configuración en el archivo `lighthouserc.js` comprueba los puntajes.
+El objetivo es implementar los cambios necesario para que el puntaje de Lighthouse cumpla con los siguientes puntajes minimos:
+
+- Performance: 90% o más.
+- Accessibility: 80% o más.
+- Best Practices: 90% o más.
+- SEO: 90% o más.
+
+Por ende en el repositorio se ha incluido el comando `npm run lhci` que dada la configuración en el archivo `lighthouserc.js` comprueba los puntajes.
 
 Cuando corras el comando `npm run lhci` por primera vez se verá así:
 
@@ -56,7 +63,7 @@ Además puedes ver un link al final para ver el reporte en modo HTML:
 
 ![report](https://i.imgur.com/hHfGWE6.png)
 
-Se espera se hagan los ajustes necesarios para que el reporte de Lighthouse en todas las categorias **sea mayor a 90%.**
+Se espera se hagan los ajustes necesarios para que el reporte de Lighthouse cumpla con los puntajes esperados.
 
 ## Como enviar tu solución
 

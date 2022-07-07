@@ -48,10 +48,10 @@ En este momento tenemos que el sitio tiene un bajo puntaje según el reporte de 
 
 El objetivo es implementar los cambios necesario para que el puntaje de Lighthouse cumpla con los siguientes puntajes minimos:
 
-- Performance: 90% o más.
-- Accessibility: 80% o más.
-- Best Practices: 90% o más.
-- SEO: 90% o más.
+- Performance: Mínimo 88% o más.
+- Accessibility: Mínimo 80% o más.
+- Best Practices: Mínimo 90% o más.
+- SEO: Mínimo 90% o más.
 
 Por ende en el repositorio se ha incluido el comando `npm run lhci` que dada la configuración en el archivo `lighthouserc.js` comprueba los puntajes.
 

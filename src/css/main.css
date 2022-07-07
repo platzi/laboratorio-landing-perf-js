@@ -417,8 +417,8 @@ section {
   font-size: 0.9em;
 }
 
-.section--features .features__left object,
-.section--features .features__right object {
+.section--features .features__left .svg,
+.section--features .features__right .svg {
   width: 30px;
   height: 30px;
   margin-bottom: 0.5rem;
@@ -479,6 +479,7 @@ section {
   color: #c0b2fc;
   font-weight: 400;
   flex-grow: 1;
+  font-size: 1em;
 }
 
 .section--stats .stats {
@@ -864,8 +865,8 @@ section {
     text-align: left;
   }
 
-  .section--features .features__left object,
-  .section--features .features__right object {
+  .section--features .features__left .svg,
+  .section--features .features__right .svg {
     margin-right: 0.7rem;
   }
 

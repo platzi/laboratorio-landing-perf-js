@@ -1,3 +1,12 @@
+/* eslint-disable no-undef */
+import "./css/main.css";
+
+import { tns } from "tiny-slider/src/tiny-slider";
+import "tiny-slider/dist/tiny-slider.css";
+import "waypoints/lib/noframework.waypoints.js";
+import { Chart, registerables } from "chart.js";
+Chart.register(...registerables);
+
 (() => {
   const App = {
     $: {
@@ -32,7 +41,7 @@
       if (items.length) {
         for (var i = 0; i < items.length; i++) {
           const date = items[i].getAttribute("data-date");
-          items[i].innerHTML = moment(date.split("-")).fromNow();
+          items[i].innerHTML = date;
         }
       }
     },
@@ -62,7 +71,7 @@
       for (var i = 0; i < scrollToRevealArray.length; i++) {
         new Waypoint({
           element: scrollToRevealArray[i],
-          handler: function (direction) {
+          handler: function () {
             this.element.classList.add("fadeInUp");
           },
           offset: Waypoint.viewportHeight(),
@@ -87,7 +96,10 @@
       const sections = App.$.sections;
       if (btns.length && sections.length > 0) {
         for (var i = 0; i < btns.length; i++) {
-          btns[i].addEventListener("click", App.smoothScrollTo.bind(this, i, btns));
+          btns[i].addEventListener(
+            "click",
+            App.smoothScrollTo.bind(this, i, btns)
+          );
         }
       }
     },
@@ -116,6 +128,7 @@
               pointRadius: 4,
               borderWidth: 1,
               pointBackgroundColor: "#C0B2FC",
+              label: "Data",
             },
           ],
         };
@@ -129,6 +142,7 @@
               labels: labels,
               backgroundColor: "rgba(174,155,255,0.67)",
               data: numbers,
+              label: "Data",
             },
           ],
         };
@@ -146,10 +160,14 @@
 
         if (i !== 1 && i !== 4) {
           type = "line";
-          dataType = App.stats.getGeneratedLineData(App.stats.randomArray(30, 1000));
+          dataType = App.stats.getGeneratedLineData(
+            App.stats.randomArray(30, 1000)
+          );
         } else {
           type = "bar";
-          dataType = App.stats.getGeneratedBarData(App.stats.randomArray(30, 1000));
+          dataType = App.stats.getGeneratedBarData(
+            App.stats.randomArray(30, 1000)
+          );
         }
 
         new Chart(ctx, {
@@ -167,24 +185,6 @@
             },
             legend: {
               display: false,
-            },
-            scales: {
-              yAxes: [
-                {
-                  ticks: {
-                    fontColor: "#444363",
-                    fontSize: 12,
-                  },
-                },
-              ],
-              xAxes: [
-                {
-                  ticks: {
-                    fontColor: "#444363",
-                    fontSize: 12,
-                  },
-                },
-              ],
             },
           },
         });

@@ -37,16 +37,6 @@
       href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Open+Sans:wght@300&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.6.0/tiny-slider.css"
-    />
-    <link rel="stylesheet" href="./css/main.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.6.0/min/tiny-slider.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
   </head>
   <body>
     <nav class="nav--desktop">
@@ -437,7 +427,7 @@
       <div class="stats__block">
         <div class="flex--horizontal">
           <h4 class="stats__name">A/B Split</h4>
-          <h5 class="font-fjalla stats__result">A/B</h4>
+          <h5 class="font-fjalla stats__result">A/B</h5>
         </div>
         <div class="stats">
           <canvas id="stats-0"></canvas>
@@ -626,7 +616,7 @@
                     media="(min-width: 450px)"
                   />
                   <img
-                    src="./images/customer-2.png"
+                    src="./images//customer-2.png"
                     alt="customer 2"
                     loading="lazy"
                   />
@@ -649,13 +639,18 @@
       </div>
     </section>
 
-    <script type="text/javascript" src="./js/main.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script>
+      partytown = {
+        forward: ['dataLayer.push'],
+      };
+    </script>
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-86QH9G25FH"
+      type="text/partytown"
     ></script>
-    <script>
+    <script type="text/partytown">
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);

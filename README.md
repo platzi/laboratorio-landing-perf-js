@@ -48,7 +48,7 @@ En este momento tenemos que el sitio tiene un bajo puntaje según el reporte de 
 
 El objetivo es implementar los cambios necesario para que el puntaje de Lighthouse cumpla con los siguientes puntajes minimos:
 
-- Performance: Mínimo 88% o más.
+- Performance: Mínimo 75% o más.
 - Accessibility: Mínimo 80% o más.
 - Best Practices: Mínimo 90% o más.
 - SEO: Mínimo 90% o más.

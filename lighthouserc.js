@@ -3,8 +3,8 @@ module.exports = {
     collect: {
       startServerCommand: "npm run start",
       url: ["http://localhost:8080"],
-      numberOfRuns: 1,
-      chromePath: "/bin/google-chrome",
+      numberOfRuns: 3,
+      // chromePath: "/bin/google-chrome",
     },
     assert: {
       assertions: {

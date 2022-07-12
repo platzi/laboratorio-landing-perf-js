@@ -65,6 +65,23 @@ Además puedes ver un link al final para ver el reporte en modo HTML:
 
 Se espera se hagan los ajustes necesarios para que el reporte de Lighthouse cumpla con los puntajes esperados.
 
+> Si usas WSL2 o Linux puede que tengas que especificar en el path en donde está instalado Chrome en el archivo `lighthouserc.js` puedes configurar esa ubicación.
+
+```js
+module.exports = {
+  ci: {
+    collect: {
+      startServerCommand: "npm run start",
+      url: ["http://localhost:8080"],
+      numberOfRuns: 3,
+      // chromePath: "/bin/google-chrome", 👈
+    },
+    ...
+  },
+};
+
+```
+
 ## Como enviar tu solución
 
 Debes de hacer un "Fork" de este proyecto, revolver los problemas y crear un Pull Request hacia este repositorio.

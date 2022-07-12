@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start": "http-server ./src -p 8080",
-    "lhci": "lhci autorun"
+    "lhci": "lhci autorun --config=lighthouserc.js"
   },
   "keywords": [],
   "author": "",

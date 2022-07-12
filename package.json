@@ -7,7 +7,8 @@
     "lhci": "lhci autorun",
     "images": "npm run images:resize && npm run images:compress",
     "images:resize": "node scripts/resize.mjs",
-    "images:compress": "node scripts/compress.mjs"
+    "images:compress": "node scripts/compress.mjs",
+    "lhci": "lhci autorun --config=lighthouserc.js"
   },
   "keywords": [],
   "author": "",

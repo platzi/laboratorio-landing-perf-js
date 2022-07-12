@@ -4,13 +4,20 @@
   "description": "",
   "scripts": {
     "start": "http-server ./src -p 8080",
-    "lhci": "lhci autorun --config=lighthouserc.js"
+    "lhci": "lhci autorun --config=lighthouserc.js",
+    "images": "npm run images:resize && npm run images:compress",
+    "images:resize": "node scripts/resize.mjs",
+    "images:compress": "node scripts/compress.mjs"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "http-server": "14.1.1"
+    "http-server": "14.1.1",
+    "imagemin": "8.0.1",
+    "imagemin-pngquant": "9.0.2",
+    "imagemin-webp": "7.0.0",
+    "sharp": "0.30.7"
   },
   "devDependencies": {
     "@lhci/cli": "0.9.0"

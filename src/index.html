@@ -1,14 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>OASIS - Error tracking and monitor</title>
+    <meta name="description" content="Error tracking and monitor" />
+
+    <!-- Google / Search Engine Tags -->
+    <meta itemprop="name" content="OASIS - Error tracking and monitor" />
+    <meta itemprop="description" content="Error tracking and monitor" />
+    <meta itemprop="image" content="./images/hero-phone.png" />
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="OASIS - Error tracking and monitor" />
+    <meta property="og:description" content="Error tracking and monitor" />
+    <meta property="og:image" content="./images/hero-phone.png" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="OASIS - Error tracking and monitor" />
+    <meta name="twitter:description" content="Error tracking and monitor" />
+    <meta name="twitter:image" content="./images/hero-phone.png" />
+
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.0.9/css/all.css"
       integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Open+Sans"
+      href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Open+Sans:wght@300&display=swap"
       rel="stylesheet"
     />
     <link
@@ -19,12 +45,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.6.0/min/tiny-slider.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment-with-locales.min.js"
-      integrity="sha512-vFABRuf5oGUaztndx4KoAEUVQnOvAIFs59y4tO0DILGWhQiFnFHiR+ZJfxLDyJlXgeut9Z07Svuvm+1Jv89w5g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
   </head>
   <body>
     <nav class="nav--desktop">
@@ -83,7 +105,37 @@
           </a>
         </div>
         <div class="flex_child--horizontal fadeInUp">
-          <img src="./images/hero-phone.png" />
+          <picture>
+            <source
+              srcset="./images/hero-phone-large.webp"
+              media="(min-width: 1800px)"
+            />
+            <source
+              srcset="./images/hero-phone-medium.webp"
+              media="(min-width: 640px)"
+            />
+            <source
+              srcset="./images/hero-phone-small.webp"
+              media="(min-width: 450px)"
+            />
+            <source
+              srcset="./images/hero-phone-large.png"
+              media="(min-width: 1800px)"
+            />
+            <source
+              srcset="./images/hero-phone-medium.png"
+              media="(min-width: 640px)"
+            />
+            <source
+              srcset="./images/hero-phone-small.png"
+              media="(min-width: 450px)"
+            />
+            <img
+              src="./images/hero-phone.png"
+              alt="hero phone"
+              loading="lazy"
+            />
+          </picture>
         </div>
       </div>
     </section>
@@ -92,15 +144,105 @@
       <div class="flex--vertical">
         <div class="flex_child--vertical flex--horizontal summary__lists">
           <div class="summary__list flex--horizontal fadeIn">
-            <img src="./images/summary-github.png" />
+            <picture>
+              <source
+                srcset="./images/summary-github-large.webp"
+                media="(min-width: 1800px)"
+              />
+              <source
+                srcset="./images/summary-github-medium.webp"
+                media="(min-width: 640px)"
+              />
+              <source
+                srcset="./images/summary-github-small.webp"
+                media="(min-width: 450px)"
+              />
+              <source
+                srcset="./images/summary-github-large.png"
+                media="(min-width: 1800px)"
+              />
+              <source
+                srcset="./images/summary-github-medium.png"
+                media="(min-width: 640px)"
+              />
+              <source
+                srcset="./images/summary-github-small.png"
+                media="(min-width: 450px)"
+              />
+              <img
+                src="./images/summary-github.png"
+                alt="summary github"
+                loading="lazy"
+              />
+            </picture>
             <p>works on phone and all devices</p>
           </div>
           <div class="summary__list flex--horizontal fadeIn">
-            <img src="./images/summary-cpu.png" />
+            <picture>
+              <source
+                srcset="./images/summary-cpu-large.webp"
+                media="(min-width: 1800px)"
+              />
+              <source
+                srcset="./images/summary-cpu-medium.webp"
+                media="(min-width: 640px)"
+              />
+              <source
+                srcset="./images/summary-cpu-small.webp"
+                media="(min-width: 450px)"
+              />
+              <source
+                srcset="./images/summary-cpu-large.png"
+                media="(min-width: 1800px)"
+              />
+              <source
+                srcset="./images/summary-cpu-medium.png"
+                media="(min-width: 640px)"
+              />
+              <source
+                srcset="./images/summary-cpu-small.png"
+                media="(min-width: 450px)"
+              />
+              <img
+                src="./images/summary-cpu.png"
+                alt="summary cpu"
+                loading="lazy"
+              />
+            </picture>
             <p>free status page for monitoring</p>
           </div>
           <div class="summary__list flex--horizontal fadeIn">
-            <img src="./images/summary-dollar.png" />
+            <picture>
+              <source
+                srcset="./images/summary-dollar-large.webp"
+                media="(min-width: 1800px)"
+              />
+              <source
+                srcset="./images/summary-dollar-medium.webp"
+                media="(min-width: 640px)"
+              />
+              <source
+                srcset="./images/summary-dollar-small.webp"
+                media="(min-width: 450px)"
+              />
+              <source
+                srcset="./images/summary-dollar-large.png"
+                media="(min-width: 1800px)"
+              />
+              <source
+                srcset="./images/summary-dollar-medium.png"
+                media="(min-width: 640px)"
+              />
+              <source
+                srcset="./images/summary-dollar-small.png"
+                media="(min-width: 450px)"
+              />
+              <img
+                src="./images/summary-dollar.png"
+                alt="summary dollar"
+                loading="lazy"
+              />
+            </picture>
             <p>easy integrations and setup</p>
           </div>
         </div>
@@ -178,22 +320,22 @@
       <div class="flex--horizontal">
         <div class="features__left aligner flex--vertical">
           <div class="flex--vertical fadeInLeft fadeInLeft--0">
-            <object
-              type="image/svg+xml"
-              data="./images/features-circle.svg"
+            <img
+              src="./images/features-circle.svg"
+              alt="features-circle"
               class="svg"
-            ></object>
+            />
             <p>
               Performance issues such as throughput and end-to-end delay are
               also addressed.
             </p>
           </div>
           <div class="flex--vertical fadeInLeft fadeInLeft--1">
-            <object
-              type="image/svg+xml"
-              data="./images/features-polygon.svg"
+            <img
+              src="./images/features-polygon.svg"
+              alt="features-polygon"
               class="svg"
-            ></object>
+            />
             <p>
               Many systems can be characterized as dominated either by
               throughput limitations or by latency limitations in terms of
@@ -201,11 +343,11 @@
             </p>
           </div>
           <div class="flex--vertical fadeInLeft fadeInLeft--2">
-            <object
-              type="image/svg+xml"
-              data="./images/features-rec.svg"
+            <img
+              src="./images/features-rec.svg"
+              alt="features-rec"
               class="svg"
-            ></object>
+            />
             <p>
               In some cases, hard limits such as the speed of light present
               unique problems to such systems and nothing can be done to correct
@@ -213,36 +355,67 @@
             </p>
           </div>
         </div>
-        <img class="features__image" src="./images/features-image.png" />
+        <picture>
+          <source
+            srcset="./images/features-image-large.webp"
+            media="(min-width: 1800px)"
+          />
+          <source
+            srcset="./images/features-image-medium.webp"
+            media="(min-width: 640px)"
+          />
+          <source
+            srcset="./images/features-image-small.webp"
+            media="(min-width: 450px)"
+          />
+          <source
+            srcset="./images/features-image-large.png"
+            media="(min-width: 1800px)"
+          />
+          <source
+            srcset="./images/features-image-medium.png"
+            media="(min-width: 640px)"
+          />
+          <source
+            srcset="./images/features-image-small.png"
+            media="(min-width: 450px)"
+          />
+          <img
+            src="./images/features-image.png"
+            alt="features-image"
+            loading="lazy"
+            class="features__image"
+          />
+        </picture>
         <div class="features__right aligner flex--vertical">
-          <div class="flex--vertical fadeInRight fadeInRight--1">
-            <object
-              type="image/svg+xml"
-              data="./images/features-star.svg"
+          <div class="flex--vertical fadeInRight fadeInRight--0">
+            <img
+              src="./images/features-star.svg"
+              alt="features-star"
               class="svg"
-            ></object>
+            />
             <p>
               Other systems allow for significant balancing and optimization for
               best user experience.
             </p>
           </div>
-          <div class="flex--vertical fadeInRight fadeInRight--2">
-            <object
-              type="image/svg+xml"
-              data="./images/features-triangle.svg"
+          <div class="flex--vertical fadeInRight fadeInRight--1">
+            <img
+              src="./images/features-triangle.svg"
+              alt="features-triangle"
               class="svg"
-            ></object>
+            />
             <p>
               A telecom satellite in geosynchronous orbit imposes a path length
               of at least 71000 km between transmitter and receiver.
             </p>
           </div>
-          <div class="flex--vertical fadeInRight fadeInRight--3">
-            <object
-              type="image/svg+xml"
-              data="./images/features-rec.svg"
+          <div class="flex--vertical fadeInRight fadeInRight--2">
+            <img
+              src="./images/features-triangle.svg"
+              alt="features-triangle"
               class="svg"
-            ></object>
+            />>
             <p>
               This delay can be very noticeable and affects satellite phone
               service regardless of available throughput capacity.
@@ -263,8 +436,8 @@
       </div>
       <div class="stats__block">
         <div class="flex--horizontal">
-          <h5 class="stats__name">A/B Split</h5>
-          <h4 class="font-fjalla stats__result">A/B</h4>
+          <h4 class="stats__name">A/B Split</h4>
+          <h5 class="font-fjalla stats__result">A/B</h4>
         </div>
         <div class="stats">
           <canvas id="stats-0"></canvas>
@@ -272,8 +445,8 @@
       </div>
       <div class="stats__block">
         <div class="flex--horizontal">
-          <h5 class="stats__name">Crash Rate</h5>
-          <h4 class="font-fjalla stats__result">89%</h4>
+          <h4 class="stats__name">Crash Rate</h4>
+          <h5 class="font-fjalla stats__result">89%</h5>
         </div>
         <div class="stats">
           <canvas id="stats-1"></canvas>
@@ -281,8 +454,8 @@
       </div>
       <div class="stats__block">
         <div class="flex--horizontal">
-          <h5 class="stats__name">Error reporting API - Uptime</h5>
-          <h4 class="font-fjalla stats__result">100</h4>
+          <h4 class="stats__name">Error reporting API - Uptime</h4>
+          <h5 class="font-fjalla stats__result">100</h5>
         </div>
         <div class="stats">
           <canvas id="stats-2"></canvas>
@@ -290,8 +463,8 @@
       </div>
       <div class="stats__block">
         <div class="flex--horizontal">
-          <h5 class="stats__name">General API</h5>
-          <h4 class="font-fjalla stats__result">81rps</h4>
+          <h4 class="stats__name">General API</h4>
+          <h5 class="font-fjalla stats__result">81rps</h5>
         </div>
         <div class="stats">
           <canvas id="stats-3"></canvas>
@@ -299,8 +472,8 @@
       </div>
       <div class="stats__block">
         <div class="flex--horizontal">
-          <h5 class="stats__name">Data Access API</h5>
-          <h4 class="font-fjalla stats__result">93%</h4>
+          <h4 class="stats__name">Data Access API</h4>
+          <h5 class="font-fjalla stats__result">93%</h5>
         </div>
         <div class="stats">
           <canvas id="stats-4"></canvas>
@@ -309,7 +482,7 @@
       <div class="stats__block">
         <div class="flex--horizontal">
           <h5 class="stats__name">Average Latency</h5>
-          <h4 class="font-fjalla stats__result">1.98ms</h4>
+          <h5 class="font-fjalla stats__result">1.98ms</h5>
         </div>
         <div class="stats">
           <canvas id="stats-5"></canvas>
@@ -322,12 +495,42 @@
         <h3 class="font-fjalla">Trusted by</h3>
       </div>
       <div class="flex--horizontal">
-        <img src="/images/logos/1.svg" class="logo" />
-        <img src="/images/logos/2.svg" class="logo" />
-        <img src="/images/logos/3.svg" class="logo" />
-        <img src="/images/logos/4.svg" class="logo" />
-        <img src="/images/logos/5.svg" class="logo" />
-        <img src="/images/logos/6.svg" class="logo" />
+        <img
+          src="/images/logos/1.svg"
+          class="logo"
+          alt="logo 1"
+          loading="lazy"
+        />
+        <img
+          src="/images/logos/2.svg"
+          class="logo"
+          alt="logo 2"
+          loading="lazy"
+        />
+        <img
+          src="/images/logos/3.svg"
+          class="logo"
+          alt="logo 3"
+          loading="lazy"
+        />
+        <img
+          src="/images/logos/4.svg"
+          class="logo"
+          alt="logo 4"
+          loading="lazy"
+        />
+        <img
+          src="/images/logos/5.svg"
+          class="logo"
+          alt="logo 5"
+          loading="lazy"
+        />
+        <img
+          src="/images/logos/6.svg"
+          class="logo"
+          alt="logo 6"
+          loading="lazy"
+        />
       </div>
     </section>
 
@@ -349,7 +552,37 @@
                 </p>
               </div>
               <div class="slide__image slide-0">
-                <img src="./images/customer-1.png" />
+                <picture>
+                  <source
+                    srcset="./images/customer-1-large.webp"
+                    media="(min-width: 1800px)"
+                  />
+                  <source
+                    srcset="./images/customer-1-medium.webp"
+                    media="(min-width: 640px)"
+                  />
+                  <source
+                    srcset="./images/summary-customer-1-small.webp"
+                    media="(min-width: 450px)"
+                  />
+                  <source
+                    srcset="./images/customer-1-large.png"
+                    media="(min-width: 1800px)"
+                  />
+                  <source
+                    srcset="./images/customer-1-medium.png"
+                    media="(min-width: 640px)"
+                  />
+                  <source
+                    srcset="./images/customer-1-small.png"
+                    media="(min-width: 450px)"
+                  />
+                  <img
+                    src="./images/customer-1.png"
+                    alt="customer 1"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
             </div>
           </div>
@@ -367,7 +600,37 @@
                 </p>
               </div>
               <div class="slide__image slide-1">
-                <img src="./images/customer-2.png" />
+                <picture>
+                  <source
+                    srcset="./images/customer-2-large.webp"
+                    media="(min-width: 1800px)"
+                  />
+                  <source
+                    srcset="./images/customer-2-medium.webp"
+                    media="(min-width: 640px)"
+                  />
+                  <source
+                    srcset="./images/customer-2-small.webp"
+                    media="(min-width: 450px)"
+                  />
+                  <source
+                    srcset="./images/customer-2-large.png"
+                    media="(min-width: 1800px)"
+                  />
+                  <source
+                    srcset="./images/customer-2-medium.png"
+                    media="(min-width: 640px)"
+                  />
+                  <source
+                    srcset="./images/customer-2-small.png"
+                    media="(min-width: 450px)"
+                  />
+                  <img
+                    src="./images/customer-2.png"
+                    alt="customer 2"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
             </div>
           </div>

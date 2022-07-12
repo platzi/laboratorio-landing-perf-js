@@ -4,11 +4,10 @@
   "description": "",
   "scripts": {
     "start": "http-server ./src -p 8080",
-    "lhci": "lhci autorun",
+    "lhci": "lhci autorun --config=lighthouserc.js",
     "images": "npm run images:resize && npm run images:compress",
     "images:resize": "node scripts/resize.mjs",
-    "images:compress": "node scripts/compress.mjs",
-    "lhci": "lhci autorun --config=lighthouserc.js"
+    "images:compress": "node scripts/compress.mjs"
   },
   "keywords": [],
   "author": "",

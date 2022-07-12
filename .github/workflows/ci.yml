@@ -17,6 +17,8 @@ jobs:
           node-version: 16.x
       - name: Install
         run: npm ci
+      - name: Build
+        run: npm run build
       - name: Run
         run: npm run lhci
 

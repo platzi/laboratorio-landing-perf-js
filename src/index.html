@@ -93,7 +93,10 @@
           </a>
         </div>
         <div class="flex_child--horizontal fadeInUp">
-          <img src="./images/hero-phone.jpg" alt="" />
+          <picture>
+            <source srcset="./images/hero-phone.webp" />
+            <img src="./images/hero-phone.jpg" alt="" />
+          </picture>
         </div>
       </div>
     </section>
@@ -226,11 +229,14 @@
             </p>
           </div>
         </div>
-        <img
-          class="features__image"
-          src="./images/features-image.jpg"
-          alt="Oasis uptime and average response time monitoring features"
-        />
+        <picture>
+          <source srcset="./images/features-image.webp" />
+          <img
+            class="features__image"
+            src="./images/features-image.jpg"
+            alt="Oasis uptime and average response time monitoring features"
+          />
+        </picture>
         <div class="features__right aligner flex--vertical">
           <div class="flex--vertical fadeInRight fadeInRight--1">
             <object
@@ -401,6 +407,10 @@
               <div class="slide__image slide-0">
                 <picture>
                   <source
+                    srcset="./images/customer-1.webp"
+                    media="(min-width: 770px)"
+                  />
+                  <source
                     srcset="./images/customer-1.jpg"
                     media="(min-width: 770px)"
                   />
@@ -424,6 +434,10 @@
               </div>
               <div class="slide__image slide-1">
                 <picture>
+                  <source
+                    srcset="./images/customer-2.webp"
+                    media="(min-width: 770px)"
+                  />
                   <source
                     srcset="./images/customer-2.jpg"
                     media="(min-width: 770px)"

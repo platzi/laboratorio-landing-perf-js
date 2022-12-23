@@ -457,6 +457,10 @@ section {
   margin: 8rem auto;
 }
 
+.section--stats .stats__result {
+  font-size: 1.3rem;
+}
+
 .section--stats .stats__block {
   border: 1px solid #6146d7;
   border-radius: 3px;

@@ -100,6 +100,9 @@ Chart.register(...registerables);
     listenerNavIcon: () => {
       const navIcon = App.$.navIcon;
       navIcon.addEventListener("click", function () {
+        const ariaExpanded = navIcon.getAttribute('aria-expanded');
+        const isExpanded = ariaExpanded === 'true'
+        navIcon.setAttribute('aria-expanded', `${!isExpanded}`);
         document.querySelector(".mobile-list").classList.toggle("show");
       });
     },

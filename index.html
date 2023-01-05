@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Oasis: Prevent incidents and be efficient</title>
 
-  <link rel="preconnect" href="https://use.fontawesome.com">
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,8 +15,6 @@
   <link rel="stylesheet" href="/css/main.css" />
 
   <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css"
-    integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
 
   <script defer type="module" src="/src/js/main.js"></script>
@@ -34,7 +31,11 @@
     <a href="#section-contact" class="js-btn" data-hover="contact">contact</a>
   </nav>
   <nav class="nav--mobile">
-    <div class="nav--icon"><i class="fas fa-cube"></i></div>
+    <div class="nav--icon">
+      <svg viewBox="0 0 512 512" class="svg">
+        <use xlink:href="/images/cube.svg#icon-cube"></use>
+      </svg>
+    </div>
     <div class="mobile-list">
       <div class="centered">
         <a href="#section-hero" class="js-btn" data-hover="home">Home</a>

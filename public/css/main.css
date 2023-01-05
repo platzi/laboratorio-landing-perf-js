@@ -566,7 +566,8 @@ section {
 
 .slide__image {
   width: 400px;
-  height: 400px;
+  max-height: 400px;
+  height: max-content;
   margin-left: -1rem;
   box-shadow: 0 2px 11px 0 rgba(0, 0, 0, 0.3);
 }

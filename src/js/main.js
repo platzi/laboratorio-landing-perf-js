@@ -23,8 +23,8 @@ Chart.register(...registerables);
         rewind: false,
         mode: "gallery",
         controlsText: [
-          '<i class="fas fa-angle-left"></i>',
-          '<i class="fas fa-angle-right"></i>',
+          '<svg viewBox="0 0 12 12" width="24" height="24"><use xlink:href="/images/icons.svg#icon-angle-right-arrow"></use></svg>',
+          '<svg viewBox="0 0 12 12" width="24" height="24"><use xlink:href="/images/icons.svg#icon-angle-left-arrow"></use></svg>',
         ],
         nav: false,
       });

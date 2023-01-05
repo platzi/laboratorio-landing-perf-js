@@ -1,8 +1,6 @@
-import { Chart, registerables } from "chart.js";
+import { Chart } from "chart.js";
 import { format } from "timeago.js";
 import { tns } from "tiny-slider";
-
-Chart.register(...registerables);
 
 (() => {
   const App = {
@@ -171,19 +169,17 @@ Chart.register(...registerables);
                 tension: 0,
               },
             },
-            plugins: {
-              legend: {
-                display: false,
-              },
+            legend: {
+              display: false,
             },
             scales: {
-              y: {
+              yAxes: {
                 ticks: {
                   fontColor: "#444363",
                   fontSize: 12,
                 },
               },
-              x: {
+              xAxes: {
                 ticks: {
                   fontColor: "#444363",
                   fontSize: 12,

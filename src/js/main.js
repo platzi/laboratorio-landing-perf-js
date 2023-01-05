@@ -1,6 +1,7 @@
 import { Chart, registerables } from 'chart.js';
 import { format } from "timeago.js";
 import { tns } from "tiny-slider";
+// import WebFont from 'webfontloader';
 
 Chart.register(...registerables);
 
@@ -16,6 +17,13 @@ Chart.register(...registerables);
       sections: document.querySelectorAll(".js-section"),
       getTimeAgoItems: () => document.querySelectorAll(".time-ago"),
     },
+    // initWebFonts: () => {
+    //   WebFont.load({
+    //     google: {
+    //       families: ['Fjalla One']
+    //     }
+    //   });
+    // },
     initTinySlider: () => {
       const slider = tns({
         container: ".slide__container",
@@ -206,6 +214,7 @@ Chart.register(...registerables);
       }
     },
     init() {
+      // App.initWebFonts();
       App.generateCharts();
       App.initTinySlider();
       App.ariaTinySlider();

@@ -1,3 +1,5 @@
+import { format } from "timeago.js";
+
 (() => {
   const App = {
     $: {
@@ -32,7 +34,7 @@
       if (items.length) {
         for (var i = 0; i < items.length; i++) {
           const date = items[i].getAttribute("data-date");
-          items[i].innerHTML = moment(date.split("-")).fromNow();
+          items[i].innerHTML = format(date)
         }
       }
     },

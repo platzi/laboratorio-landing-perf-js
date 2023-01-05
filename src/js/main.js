@@ -12,6 +12,7 @@ Chart.register(...registerables);
       mobileList: document.querySelector(".mobile-list"),
       navIcon: document.querySelector(".nav--icon"),
       btns: document.querySelectorAll(".js-btn"),
+      slideContainer: document.querySelector(".slide__container"),
       sections: document.querySelectorAll(".js-section"),
       getTimeAgoItems: () => document.querySelectorAll(".time-ago"),
     },
@@ -32,6 +33,13 @@ Chart.register(...registerables);
         App.calcTimeAgo();
       });
       App.calcTimeAgo();
+    },
+    ariaTinySlider: () => {
+      const sliderButtons = [...document.querySelectorAll('.tns-controls > button')];
+      sliderButtons.forEach(button => {
+        const actionName = button.dataset.controls;
+        button.setAttribute('aria-label', `Go to ${actionName} slide`);
+      })
     },
     calcTimeAgo: () => {
       const items = App.$.getTimeAgoItems();
@@ -200,6 +208,7 @@ Chart.register(...registerables);
     init() {
       App.generateCharts();
       App.initTinySlider();
+      App.ariaTinySlider();
       App.initScrollToReveal();
       App.initScrollToRevealNav();
       App.attachBtsForSmoothScroll();

@@ -65,7 +65,7 @@
         </a>
       </div>
       <div class="flex_child--horizontal fadeInUp">
-        <img src="./images/hero-phone.webp" width="313" height="587" />
+        <img src="./images/hero-phone.webp" sizes="(max-width)" width="313" height="587" />
       </div>
     </div>
   </section>
@@ -279,13 +279,25 @@
     <div class="section__title">
       <h3 class="font-fjalla">Trusted by</h3>
     </div>
-    <div class="flex--horizontal">
-      <img src="/images/logos/1.svg" class="logo" loading="lazy" />
-      <img src="/images/logos/2.svg" class="logo" loading="lazy" />
-      <img src="/images/logos/3.svg" class="logo" loading="lazy" />
-      <img src="/images/logos/4.svg" class="logo" loading="lazy" />
-      <img src="/images/logos/5.svg" class="logo" loading="lazy" />
-      <img src="/images/logos/6.svg" class="logo" loading="lazy" />
+    <div class="flex--horizontal gap-x--1-5">
+      <svg viewBox="0 0 160 128" class="logo">
+        <use xlink:href="/images/logos.svg#logo-airbnb"></use>
+      </svg>
+      <svg viewBox="0 0 160 128" class="logo">
+        <use xlink:href="/images/logos.svg#logo-netflix"></use>
+      </svg>
+      <svg viewBox="0 0 160 128" class="logo">
+        <use xlink:href="/images/logos.svg#logo-eventbrite"></use>
+      </svg>
+      <svg viewBox="0 0 160 128" class="logo">
+        <use xlink:href="/images/logos.svg#logo-twitter"></use>
+      </svg>
+      <svg viewBox="0 0 160 128" class="logo">
+        <use xlink:href="/images/logos.svg#logo-google"></use>
+      </svg>
+      <svg viewBox="0 0 160 128" class="logo">
+        <use xlink:href="/images/logos.svg#logo-spotify"></use>
+      </svg>
     </div>
   </section>
 
@@ -307,7 +319,11 @@
               </p>
             </div>
             <div class="slide__image slide-0">
-              <img src="./images/customer-1.webp" loading="lazy" width="400" height="400" />
+              <picture>
+                <source type="image/webp" srcset="./images/customer-1--mobile.webp" media="(max-width: 770px)"
+                  width="100">
+                <img src="./images/customer-1.webp" loading="lazy" width="400" />
+              </picture>
             </div>
           </div>
         </div>
@@ -325,7 +341,11 @@
               </p>
             </div>
             <div class="slide__image slide-1">
-              <img src="./images/customer-2.webp" loading="lazy" width="400" height="400" />
+              <picture>
+                <source type="image/webp" srcset="./images/customer-2--mobile.webp" media="(max-width: 770px)"
+                  width="100">
+                <img src="./images/customer-2.webp" loading="lazy" width="400" />
+              </picture>
             </div>
           </div>
         </div>

@@ -206,6 +206,10 @@ nav.fixed {
   flex-direction: row;
 }
 
+.gap-x--1-5{
+  column-gap: 1.5rem;
+}
+
 .flex--vertical {
   display: flex;
   flex-direction: column;

@@ -384,7 +384,7 @@ section {
 
 .section--snippets:after {
   position: absolute;
-  background: url(./../images/info.png) no-repeat;
+  background: url(./../images/info.webp) no-repeat;
   content: "";
   top: 100px;
   right: 30px;

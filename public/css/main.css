@@ -491,6 +491,10 @@ section {
   font-size: 1em;
 }
 
+.section--stats .stats__result {
+  font-size: 1.4em;
+}
+
 .section--stats .stats {
   position: relative;
   height: 100px;

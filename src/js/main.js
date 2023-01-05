@@ -1,4 +1,5 @@
 import { format } from "timeago.js";
+import { tns } from "tiny-slider";
 
 (() => {
   const App = {

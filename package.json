@@ -15,7 +15,8 @@
   "license": "ISC",
   "dependencies": {
     "http-server": "14.1.1",
-    "timeago.js": "4.0.2"
+    "timeago.js": "4.0.2",
+    "tiny-slider": "2.9.4"
   },
   "devDependencies": {
     "@lhci/cli": "0.9.0",

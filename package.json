@@ -4,8 +4,8 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "lhci": "lhci autorun --config=lighthouserc.js",
-    "start": "vite",
+    "lhci": "lhci autorun --config=lighthouserc.json",
+    "start": "http-server ./dist -p 8080",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"

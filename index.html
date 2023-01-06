@@ -14,10 +14,28 @@
 
   <link rel="stylesheet" href="/css/main.css" />
 
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet" /> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
 
   <script defer type="module" src="/src/js/main.js"></script>
+
+  <style>
+    @font-face {
+      font-family: 'Fjalla One';
+      font-style: normal;
+      font-weight: 400;
+      src: url(https://fonts.gstatic.com/s/fjallaone/v13/Yq6R-LCAWCX3-6Ky7FAFrO96kigt.woff2) format('woff2');
+      font-display: swap;
+    }
+
+    /* latin */
+    @font-face {
+      font-family: 'Fjalla One';
+      font-style: normal;
+      font-weight: 400;
+      src: url(https://fonts.gstatic.com/s/fjallaone/v13/Yq6R-LCAWCX3-6Ky7FAFrOF6kg.woff2) format('woff2');
+      font-display: swap;
+    }
+  </style>
 
   <meta name="description"
     content="Oasis: Error tracking and monitor all your server status at all time. Prevent incidents and be efficient.">
@@ -335,8 +353,8 @@
             <div class="slide__image slide-0">
               <picture>
                 <source type="image/webp" srcset="/images/customer-1--mobile.webp" media="(max-width: 770px)"
-                  width="100">
-                <img src="/images/customer-1.webp" loading="lazy" width="400" alt="Costumer photo" />
+                  width="100" height="100">
+                <img src="/images/customer-1.webp" loading="lazy" width="400" height="400" alt="Costumer photo" />
               </picture>
             </div>
           </div>
@@ -357,8 +375,8 @@
             <div class="slide__image slide-1">
               <picture>
                 <source type="image/webp" srcset="/images/customer-2--mobile.webp" media="(max-width: 770px)"
-                  width="100">
-                <img src="/images/customer-2.webp" loading="lazy" width="400" alt="Costumer photo" />
+                  width="100" height="100">
+                <img src="/images/customer-2.webp" loading="lazy" width="400" height="400" alt="Costumer photo" />
               </picture>
             </div>
           </div>
@@ -378,14 +396,6 @@
     </div>
   </section>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-  <script>
-    WebFont.load({
-      google: {
-        families: ['Fjalla One']
-      }
-    });
-  </script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-86QH9G25FH"></script>
   <script>

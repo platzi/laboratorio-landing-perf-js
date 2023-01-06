@@ -1,3 +1,10 @@
+import { Chart, registerables } from 'chart.js';
+import { format } from "timeago.js";
+import { tns } from "tiny-slider";
+// import WebFont from 'webfontloader';
+
+Chart.register(...registerables);
+
 (() => {
   const App = {
     $: {
@@ -6,9 +13,17 @@
       mobileList: document.querySelector(".mobile-list"),
       navIcon: document.querySelector(".nav--icon"),
       btns: document.querySelectorAll(".js-btn"),
+      slideContainer: document.querySelector(".slide__container"),
       sections: document.querySelectorAll(".js-section"),
       getTimeAgoItems: () => document.querySelectorAll(".time-ago"),
     },
+    // initWebFonts: () => {
+    //   WebFont.load({
+    //     google: {
+    //       families: ['Fjalla One']
+    //     }
+    //   });
+    // },
     initTinySlider: () => {
       const slider = tns({
         container: ".slide__container",
@@ -17,8 +32,8 @@
         rewind: false,
         mode: "gallery",
         controlsText: [
-          '<i class="fas fa-angle-left"></i>',
-          '<i class="fas fa-angle-right"></i>',
+          '<svg viewBox="0 0 12 12" width="24" height="24"><use xlink:href="/images/icons.svg#icon-angle-right-arrow"></use></svg>',
+          '<svg viewBox="0 0 12 12" width="24" height="24"><use xlink:href="/images/icons.svg#icon-angle-left-arrow"></use></svg>',
         ],
         nav: false,
       });
@@ -27,12 +42,19 @@
       });
       App.calcTimeAgo();
     },
+    ariaTinySlider: () => {
+      const sliderButtons = [...document.querySelectorAll('.tns-controls > button')];
+      sliderButtons.forEach(button => {
+        const actionName = button.dataset.controls;
+        button.setAttribute('aria-label', `Go to ${actionName} slide`);
+      })
+    },
     calcTimeAgo: () => {
       const items = App.$.getTimeAgoItems();
       if (items.length) {
         for (var i = 0; i < items.length; i++) {
           const date = items[i].getAttribute("data-date");
-          items[i].innerHTML = moment(date.split("-")).fromNow();
+          items[i].innerHTML = format(date)
         }
       }
     },
@@ -94,6 +116,9 @@
     listenerNavIcon: () => {
       const navIcon = App.$.navIcon;
       navIcon.addEventListener("click", function () {
+        const ariaExpanded = navIcon.getAttribute('aria-expanded');
+        const isExpanded = ariaExpanded === 'true'
+        navIcon.setAttribute('aria-expanded', `${!isExpanded}`);
         document.querySelector(".mobile-list").classList.toggle("show");
       });
     },
@@ -165,34 +190,34 @@
                 tension: 0,
               },
             },
-            legend: {
-              display: false,
+            plugins: {
+              legend: {
+                display: false,
+              },
             },
             scales: {
-              yAxes: [
-                {
-                  ticks: {
-                    fontColor: "#444363",
-                    fontSize: 12,
-                  },
+              y: {
+                ticks: {
+                  fontColor: "#444363",
+                  fontSize: 12,
                 },
-              ],
-              xAxes: [
-                {
-                  ticks: {
-                    fontColor: "#444363",
-                    fontSize: 12,
-                  },
+              },
+              x: {
+                ticks: {
+                  fontColor: "#444363",
+                  fontSize: 12,
                 },
-              ],
+              },
             },
           },
         });
       }
     },
     init() {
+      // App.initWebFonts();
       App.generateCharts();
       App.initTinySlider();
+      App.ariaTinySlider();
       App.initScrollToReveal();
       App.initScrollToRevealNav();
       App.attachBtsForSmoothScroll();

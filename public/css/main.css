@@ -46,7 +46,7 @@ body {
 
 body {
   min-height: 100%;
-  font-family: "Open Sans", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background-color: #27253f;
   color: white;
   font-weight: 300;
@@ -56,6 +56,7 @@ body {
 img {
   max-width: 100%;
   width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -80,6 +81,7 @@ nav a {
   color: white;
   text-decoration: none;
   position: relative;
+  transition: 0.5s color ease;
 }
 
 nav a:not(:last-child) {
@@ -93,7 +95,6 @@ nav a:not(:last-child) {
 }
 
 nav a:before {
-  transition: 0.5s all ease;
   position: absolute;
   left: 50%;
   right: 50%;
@@ -102,6 +103,7 @@ nav a:before {
   content: "";
   height: 2px;
   background-color: #c0b2fc;
+  transition: 0.5s left ease;
 }
 
 nav a:hover {
@@ -109,7 +111,6 @@ nav a:hover {
 }
 
 nav a:hover:before {
-  transition: 0.5s all ease;
   left: 0;
   right: 0;
   opacity: 1;
@@ -129,30 +130,28 @@ nav.fixed {
   transition: 0.3s;
 }
 
+svg, .svg {
+  vertical-align: middle;
+}
+
 .nav--mobile {
   display: none;
 }
 
 .nav--icon {
+  border: none;
   border-radius: 100px;
   padding: 0.5rem;
-  width: 25px;
-  height: 25px;
   background-color: #38355a;
   text-align: right;
   font-size: 1rem;
+  color: white;
   position: fixed;
   left: 50%;
   top: 3%;
   transform: translateX(-50%);
   z-index: 100;
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
-}
-
-.nav--icon:hover {
-  transform: translateX(-50%) rotate(360deg);
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
 }
 
 .mobile-list {
@@ -206,6 +205,10 @@ nav.fixed {
   flex-direction: row;
 }
 
+.gap-x--1-5{
+  column-gap: 1.5rem;
+}
+
 .flex--vertical {
   display: flex;
   flex-direction: column;
@@ -238,6 +241,10 @@ section {
 
 .section--hero .cta small {
   vertical-align: top;
+}
+
+.section--hero .cta {
+  transition: transform 0.2s;
 }
 
 .section--hero .cta:hover {
@@ -344,7 +351,7 @@ section {
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  transition: 0.3s;
+  transition: transform 0.3s;
 }
 
 .section--snippets .snippets__card>p {
@@ -353,7 +360,7 @@ section {
 }
 
 .section--snippets .snippets__card:hover {
-  transform: translate3d(-10px, 0px, 0px);
+  transform: translateX(-10px);
 }
 
 .section--snippets .snippets__title {
@@ -380,7 +387,7 @@ section {
 
 .section--snippets:after {
   position: absolute;
-  background: url(./../images/info.png) no-repeat;
+  background: url(./../images/info.webp) no-repeat;
   content: "";
   top: 100px;
   right: 30px;
@@ -463,12 +470,12 @@ section {
   padding: 1rem 1rem 0 1rem;
   height: 160px;
   margin-bottom: 1rem;
+  transition: background 1s, color 1s;
 }
 
 .section--stats .stats__block:hover {
   background-color: #c0b2fc;
   color: #27253f;
-  transition: 1s;
 }
 
 .section--stats .stats__block:hover .stats__name {
@@ -481,6 +488,10 @@ section {
   font-weight: 400;
   flex-grow: 1;
   font-size: 1em;
+}
+
+.section--stats .stats__result {
+  font-size: 1.4em;
 }
 
 .section--stats .stats {
@@ -524,7 +535,7 @@ section {
 }
 
 .section--contact {
-  background: url("./../images/contact-bg.png") repeat;
+  background: url("./../images/contact-bg.webp") repeat;
   padding: 8rem 3rem;
   margin: 0;
   max-width: none;
@@ -558,7 +569,8 @@ section {
 
 .slide__image {
   width: 400px;
-  height: 400px;
+  max-height: 400px;
+  height: max-content;
   margin-left: -1rem;
   box-shadow: 0 2px 11px 0 rgba(0, 0, 0, 0.3);
 }
@@ -588,12 +600,12 @@ section {
   height: 40px;
   color: #6146d7;
   outline: 0;
+  transition: background 0.3s, color 0.3s;
 }
 
 .tns-controls>button:hover {
   background-color: #6146d7;
   color: white;
-  transition: 0.3s;
 }
 
 .tns-controls>button:last-of-type {
@@ -642,7 +654,6 @@ section {
   max-width: 230px;
   text-align: left;
   cursor: pointer;
-  transition: 0.2s;
   text-decoration: none;
   position: relative;
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
@@ -651,7 +662,7 @@ section {
 .cta:after {
   position: absolute;
   content: "";
-  background-image: url(./../images/apple.png);
+  background-image: url(./../images/apple.webp);
   right: 0.5rem;
   top: 20%;
   display: block;
@@ -694,46 +705,46 @@ section {
 @keyframes fadeInUp {
   0% {
     opacity: 0;
-    transform: translate3d(0, 50px, 0);
+    transform: translateY(50px);
   }
 
   100% {
     opacity: 1;
-    transform: translate3d(0, 0, 0);
+    transform: translateY(0);
   }
 }
 
 @keyframes fadeInRight {
   0% {
     opacity: 0;
-    transform: translate3d(100px, 0, 0);
+    transform: translateX(100px);
   }
 
   100% {
     opacity: 1;
-    transform: translate3d(0, 0, 0);
+    transform: translateX(0);
   }
 }
 
 @keyframes fadeInLeft {
   0% {
     opacity: 0;
-    transform: translate3d(-100px, 0, 0);
+    transform: translateX(-100px);
   }
 
   100% {
     opacity: 1;
-    transform: translate3d(0, 0, 0);
+    transform: translateX(0);
   }
 }
 
 @keyframes infiniteStats {
   0% {
-    transform: translate3d(-1440px, 0, 0);
+    transform: translateX(-1440px);
   }
 
   100% {
-    transform: translate3d(0, 0, 0);
+    transform: translateX(0);
   }
 }
 

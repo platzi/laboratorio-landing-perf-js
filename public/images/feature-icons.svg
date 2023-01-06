@@ -1,0 +1,9 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path id="feat-i-oval" d="M20 34C27.732 34 34 27.732 34 20C34 12.268 27.732 6 20 6C12.268 6 6 12.268 6 20C6 27.732 12.268 34 20 34Z" fill="#50E3C2"/>
+    <path id="feat-i-polygon" fill-rule="evenodd" clip-rule="evenodd" d="M19.6924 5L35.3849 16.4012L29.3909 34.8488H9.99398L4 16.4012L19.6924 5Z" fill="#4A90E2"/>
+    <path id="feat-i-rectangle" d="M34 6H6V34H34V6Z" fill="#313F99"/>
+    <path id="feat-i-star" fill-rule="evenodd" clip-rule="evenodd" d="M20.168 30.5L10.1756 35.7533L12.084 24.6266L4 16.7467L15.1718 15.1234L20.168 5L25.1641 15.1234L36.3359 16.7467L28.2519 24.6266L30.1603 35.7533L20.168 30.5Z" fill="#FE4E4E"/>
+    <path id="feat-i-triangle" fill-rule="evenodd" clip-rule="evenodd" d="M20 7L35 32H5L20 7Z" fill="#F79E77"/>
+  </defs>
+</svg>
